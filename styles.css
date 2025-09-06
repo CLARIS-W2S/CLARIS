@@ -35,3 +35,13 @@
     width: 100%;
     text-align: center;
 }
+
+.blurred-text {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.blurred-text:hover {
+  filter: blur(0);
+}

@@ -204,15 +204,6 @@ async function renderAudioTable(containerId, systems, rows, exptId, hasSpeaker, 
     tdInput.innerHTML = `<audio controls style="width:150px" src="./resources/audio/${exptId}/ground_truth/${row.inputAudio}"></audio>`;
     tr.appendChild(tdInput);
 
-    // Text (fetched from txt file)
-    const tdText = document.createElement("td");
-    tdText.style.textAlign = "center";
-    tdText.style.padding = "8px";
-    const textContent = row.text;
-    tdText.style.width = "20%";
-    tdText.textContent = textContent.trim();
-    tr.appendChild(tdText);
-
     if (hasSpeaker) {
       const tdSpeaker = document.createElement("td");
       tdSpeaker.style.textAlign = "center";
@@ -230,6 +221,7 @@ async function renderAudioTable(containerId, systems, rows, exptId, hasSpeaker, 
       tr.appendChild(tdSeverity);
     }
 
+    
     // Generated audios for each system
     Object.values(systems).forEach(folderName => {
       const td = document.createElement("td");
@@ -238,10 +230,19 @@ async function renderAudioTable(containerId, systems, rows, exptId, hasSpeaker, 
       td.innerHTML = `<audio controls style="width:150px" src="./resources/audio/${exptId}/${folderName}/${row.inputAudio}"></audio>`;
       tr.appendChild(td);
     });
-
+    
     tbody.appendChild(tr);
+      // Text (fetched from txt file)
+    const tdText = document.createElement("td");
+    tdText.style.textAlign = "center";
+    tdText.style.padding = "8px";
+    const textContent = row.text;
+    tdText.style.width = "20%";
+    tdText.classList.add("blurred-text");
+    tdText.textContent = textContent.trim();
+    tr.appendChild(tdText);
   }
-
+  
   table.appendChild(tbody);
   container.appendChild(table);
 }
