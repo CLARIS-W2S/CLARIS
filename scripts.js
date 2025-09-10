@@ -129,6 +129,37 @@ const tablesData = [
             text: "When he speaks his voice is just a bit cracked and quivers a trifle"
         }
     ]
+  },
+  {
+    containerId: "TORGOFailureContainer",
+    exptId: "TORGO",
+    hasSpeaker: true,
+    hasSeverity: true,
+    systems: {
+        "ASR-TTS": "asr_tts",
+        "WESPER": "wesper",
+        "CLARIS": "claris"
+    },
+    rows: [
+        {
+            inputAudio: "F01_1_arrayMic_0008.mp3",
+            speaker: "F01",
+            severity: "Medium",
+            text: "Except in the winter when the ooze or snow or ice prevents"
+        },
+        {
+            inputAudio: "F04_1_arrayMic_0006.mp3",
+            speaker: "F04",
+            severity: "Low",
+            text: "yet he still thinks as swiftly as ever",
+        },
+        {
+            inputAudio: "M01_1_headMic_0005.mp3",
+            speaker: "M01",
+            severity: "High",
+            text: "When he speaks his voice is just a bit cracked and quivers a trifle"
+        }
+    ]
   }
 ];
 
