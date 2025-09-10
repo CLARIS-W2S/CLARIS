@@ -13,8 +13,12 @@ const tablesData = [
       "CLARIS": "claris",
     },
     rows: [
-      { inputAudio: "s000_004.mp3", speaker: "s000", text: "jane may earn more money by working hard" },
-      { inputAudio: "s006_009.mp3", speaker: "s006", text: "where were you while we were away" }
+      { inputAudio: "s000_006.mp3", speaker: "s000", text: "why yell or worry over silly items" },
+      { inputAudio: "s000_007.mp3", speaker: "s000", text: "nothing is as offensive as innocence"},
+      { inputAudio: "s006_003.mp3", speaker: "s006", text: "this was easy for us"},
+      { inputAudio: "s006_004.mp3", speaker: "s006", text: "jane may earn more money by working hard" },
+      { inputAudio: "s009_005.mp3", speaker: "s009", text: "she is thinner than I am" },
+      { inputAudio: "s009_009.mp3", speaker: "s009", text: "where were you while we were away" }
     ]
   },
   {
@@ -31,8 +35,10 @@ const tablesData = [
       "CLARIS": "claris",
     },
     rows: [
-      { inputAudio: "s127_004.mp3", speaker: "s000", text: "jane may earn more money by working hard" },
-      { inputAudio: "s130_009.mp3", speaker: "s006", text: "where were you while we were away" }
+      { inputAudio: "s127_009.mp3", speaker: "s127", text: "where were you while we were away" },
+      { inputAudio: "s130_003.mp3", speaker: "s130", text: "this was easy for us" },
+      { inputAudio: "s130_004.mp3", speaker: "s130", text: "jane may earn more money by working hard" },
+      { inputAudio: "s131_009.mp3", speaker: "s131", text: "where were you while we were away" }
     ]
   },
   {
@@ -55,6 +61,18 @@ const tablesData = [
             text: "for example, with more readiness and dexterity than any other." 
         },
         { 
+            inputAudio: "speaker01_english_nonnative_effort1_10_2.mp3", 
+            text: "he frequently exchanges them for cattle or for venison" 
+        },
+        { 
+            inputAudio: "speaker01_english_nonnative_effort1_10_10.mp3", 
+            text: "and he becomes a sort of armourer" 
+        },
+        { 
+            inputAudio: "speaker01_english_nonnative_effort1_10_12.mp3", 
+            text: "he is accustomed to be of use in this way to his neighbours" 
+        },
+        { 
             inputAudio: "speaker01_english_nonnative_effort1_10_21.mp3", 
             text: "which is over and above his own consumption." 
         }
@@ -67,7 +85,6 @@ const tablesData = [
     hasSeverity: false,
     systems: {
         "ASR-TTS": "asr_tts",
-        "DistillW2N": "distillw2n",
         "WESPER": "wesper",
         "CLARIS": "claris"
     },
@@ -141,14 +158,6 @@ async function renderAudioTable(containerId, systems, rows, exptId, hasSpeaker, 
   thInput.style.padding = "8px";
   headerRow1.appendChild(thInput);
 
-  const thText = document.createElement("th");
-  thText.rowSpan = 2;
-  thText.textContent = "Text";
-  thText.style.textAlign = "center";
-  thText.style.padding = "8px";
-  thText.style.width = "20%";
-  headerRow1.appendChild(thText);
-
   if (hasSpeaker) {
     const thSpeaker = document.createElement("th");
     thSpeaker.rowSpan = 2;
@@ -161,7 +170,7 @@ async function renderAudioTable(containerId, systems, rows, exptId, hasSpeaker, 
   if (hasSeverity) {
     const thStyle = document.createElement("th");
     thStyle.rowSpan = 2;
-    thStyle.textContent = "Style";
+    thStyle.textContent = "Severity";
     thStyle.style.textAlign = "center";
     thStyle.style.padding = "8px";
     headerRow1.appendChild(thStyle);
@@ -173,6 +182,14 @@ async function renderAudioTable(containerId, systems, rows, exptId, hasSpeaker, 
   thGenerated.style.textAlign = "center";
   thGenerated.style.padding = "8px";
   headerRow1.appendChild(thGenerated);
+
+  const thText = document.createElement("th");
+  thText.rowSpan = 2;
+  thText.textContent = "Text";
+  thText.style.textAlign = "center";
+  thText.style.padding = "8px";
+  thText.style.width = "20%";
+  headerRow1.appendChild(thText);
 
   thead.appendChild(headerRow1);
 
