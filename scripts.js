@@ -44,7 +44,7 @@ const tablesData = [
   {
     containerId: "IndianAccentEnglishContainer",
     exptId: "IndianAccentEnglish",
-    hasSpeaker: false,
+    hasSpeaker: true,
     hasSeverity: false,
     systems: {
       "ASR-TTS": "asr_tts",
@@ -58,22 +58,27 @@ const tablesData = [
     rows: [
         { 
             inputAudio: "speaker01_english_nonnative_effort1_10_1.mp3", 
+            speaker: "speaker01",
             text: "for example, with more readiness and dexterity than any other." 
         },
         { 
             inputAudio: "speaker01_english_nonnative_effort1_10_2.mp3", 
+            speaker: "speaker01",
             text: "he frequently exchanges them for cattle or for venison" 
         },
         { 
             inputAudio: "speaker01_english_nonnative_effort1_10_10.mp3", 
+            speaker: "speaker01",
             text: "and he becomes a sort of armourer" 
         },
         { 
             inputAudio: "speaker01_english_nonnative_effort1_10_12.mp3", 
+            speaker: "speaker01",
             text: "he is accustomed to be of use in this way to his neighbours" 
         },
         { 
             inputAudio: "speaker01_english_nonnative_effort1_10_21.mp3", 
+            speaker: "speaker01",
             text: "which is over and above his own consumption." 
         }
     ]
@@ -86,6 +91,7 @@ const tablesData = [
     systems: {
         "ASR-TTS": "asr_tts",
         "WESPER": "wesper",
+        "DistillW2N": "distillw2n",
         "CLARIS": "claris"
     },
     rows: [
@@ -132,7 +138,7 @@ const tablesData = [
   },
   {
     containerId: "TORGOFailureContainer",
-    exptId: "TORGO",
+    exptId: "TORGOFailure",
     hasSpeaker: true,
     hasSeverity: true,
     systems: {
@@ -142,22 +148,34 @@ const tablesData = [
     },
     rows: [
         {
-            inputAudio: "F01_1_arrayMic_0008.mp3",
-            speaker: "F01",
-            severity: "Medium",
-            text: "Except in the winter when the ooze or snow or ice prevents"
-        },
-        {
-            inputAudio: "F04_1_arrayMic_0006.mp3",
-            speaker: "F04",
-            severity: "Low",
-            text: "yet he still thinks as swiftly as ever",
-        },
-        {
-            inputAudio: "M01_1_headMic_0005.mp3",
+            inputAudio: "M01_1_headMic_0040.mp3",
             speaker: "M01",
             severity: "High",
-            text: "When he speaks his voice is just a bit cracked and quivers a trifle"
+            text: "but he always answers banana oil"
+        },
+        {
+            inputAudio: "F03_3_arrayMic_0214.mp3",
+            speaker: "F03",
+            severity: "Low",
+            text: "help celebrate your brother is success",
+        },
+        {
+            inputAudio: "M05_1_headMic_0078.mp3",
+            speaker: "M05",
+            severity: "Medium",
+            text: "do not ask me to carry an oily rag like that"
+        },
+        {
+          inputAudio: "M02_2_arrayMic_0091.mp3",
+          speaker: "M02",
+          severity: "High",
+          text: "sleep"
+        },
+        {
+          inputAudio: "F04_2_headMic_0220.mp3",
+          speaker: "F04",
+          severity: "Low",
+          text: "the pair of shoes was new",
         }
     ]
   }
