@@ -123,16 +123,28 @@ const tablesData = [
             text: "Except in the winter when the ooze or snow or ice prevents"
         },
         {
-            inputAudio: "F04_1_arrayMic_0006.mp3",
+            inputAudio: "F01_1_arrayMic_0007.mp3",
+            speaker: "F01",
+            severity: "Medium",
+            text: "tear"
+        },
+        {
+            inputAudio: "F04_1_arrayMic_0007.mp3",
             speaker: "F04",
             severity: "Low",
-            text: "yet he still thinks as swiftly as ever",
+            text: "sheet"
         },
         {
             inputAudio: "M01_1_headMic_0005.mp3",
             speaker: "M01",
             severity: "High",
             text: "When he speaks his voice is just a bit cracked and quivers a trifle"
+        },
+        {
+          inputAudio: "M01_1_headMic_0009.mp3",
+          speaker: "M01",
+          severity: "high",
+          text: "Grandfather likes to be modern in his language"
         }
     ]
   },
