@@ -102,7 +102,19 @@ const tablesData = [
         {
             inputAudio: "speaker01_hindi_nonnative_effort1_train_hindimale_01118.mp3",
             text: "यवन म्लेच्छो के राजा, कालयवन, राक्षस को जरासंध ने, कृष्ण के विरोध में उकसाया"
-        }
+        },
+        {
+            inputAudio: "speaker01_hindi_nonnative_effort1_train_hindimale_00690.mp3",
+            text: "देखने दिखाने की रस्म के बाद, सबके कहने पर, एकांत में उसने, एक संक्षिप्त बात की, और वह, अचानक उठ कर चली गई, तब उसे लगा था कि शर्मा रही होगी"
+        },
+        {
+            inputAudio: "speaker01_hindi_nonnative_effort1_train_hindimale_00773.mp3",
+            text: "नीलांजना की आँखों में समुद्र उफान पर था, उसके खुले सीधे सीधे भूरे बाल, सोने के तार, लग रहे थे",
+        },
+        // {
+        //     inputAudio: "speaker01_hindi_nonnative_effort1_train_hindimale_00830.mp3",
+        //     text: "ऐसा बेमुर वत सलूक तो, कोई सूदखोर महाजन भी नहीं करता होगा",
+        // }
     ]
   },
   {
