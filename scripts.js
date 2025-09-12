@@ -13,7 +13,7 @@ const tablesData = [
       "CLARIS": "claris",
     },
     rows: [
-      { inputAudio: "s000_006.mp3", speaker: "s000", text: "why yell or worry over silly items" },
+      { inputAudio: "s000_006.mp3", speaker: "s000", text: "bright sunshine shimmers on the ocean" },
       { inputAudio: "s000_007.mp3", speaker: "s000", text: "nothing is as offensive as innocence"},
       { inputAudio: "s006_003.mp3", speaker: "s006", text: "this was easy for us"},
       { inputAudio: "s006_004.mp3", speaker: "s006", text: "jane may earn more money by working hard" },
