@@ -12,7 +12,7 @@
 
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #ffffff;
         }
 
         .title-section {
@@ -41,6 +41,25 @@
             font-size: 1.2rem;
             padding: 10px 20px;
         }
+
+        .toc-container {
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        .toc-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 
@@ -64,32 +83,34 @@
                 </p>
             </div>
         </div>  
-
-        <!-- Keynote Presentation Section -->
-        <!-- <div class="row resources-section">
-            <div class="col text-center" style="width: 150px">
-                <p>
-                    <a href="https://drive.google.com/file/d/1zMZ8qohblECAI2UF-M9jSm6uvzkZe8EV/view?usp=sharing" target="_blank" class="btn btn-primary" style="font-size: 1.2rem;">
-                        View Keynote Presentation
-                    </a>
-                </p>
+        
+        <!-- Table of Contents -->
+        <div class="row">
+            <div class="col-4">
+                <div class="toc-container">
+                    <nav class="toc" aria-label="Table of contents">
+                        <h4 class="toc-title">Table of Contents</h4>
+                        <ul class="toc-list">
+                            <li><a href="#abstract">Abstract</a></li>
+                            <li><a href="#teaser">CLARIS Teaser Diagram</a></li>
+                            <li><a href="#method">Proposed Method</a></li>
+                            <li><a href="#R1">R1: CLARIS trained on 44 wTIMIT speakers</a></li>
+                            <li><a href="#R2">R2: CLARIS evaluated on 4 unseen wTIMIT speakers</a></li>
+                            <li><a href="#R3">R3: Indian Accented English (finetuned)</a></li>
+                            <li><a href="#R4">R4: CLARIS trained on 6 Hindi Speakers</a></li>
+                            <li><a href="#R5">R5: CLARIS trained on 8 dysarthric speakers</a></li>
+                            <li><a href="#R6">R6: Failure cases</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div class="col text-center" style="width: 150px">
-                <p>
-                    <a href="https://drive.google.com/drive/folders/1PqjpBvluLSYzQQN9mDY8fMXCrfYHHua2?usp=drive_link" target="_blank" class="btn btn-primary" style="font-size: 1.2rem;">
-                        Download StethoText dataset
-                    </a>
-                </p>
-            </div>
-            <div class="col text-center" style="width: 150px">
-                <p>
-                    <a href="https://github.com/CLARIS-Whisper-to-Speech/Demo-Page" target="_blank" class="btn btn-primary" style="font-size: 1.2rem;">
-                        View Official Code
-                    </a>
-                </p>
-            </div>
-        </div> -->
-
+        </div>
+        <p>Note: Publically available checkpoints for the baselines (
+            <a href="https://github.com/OlaWod/FreeVC">FreeVC</a>, 
+            <a href="https://drive.google.com/drive/folders/1DF6RgIHHkn2aoyyUMt4_hPitKSc2YR9d">QuickVC</a>, 
+            <a href="https://github.com/rkmt/wesper-demo/">WESPER</a> & 
+            <a href="https://github.com/tan90xx/distillw2n/tree/master">DistillW2N</a>
+        ) were used.</p>
         <!-- Video Section -->
         <!-- <div class="row video-section">
             <div class="col-12 text-center">
@@ -101,11 +122,9 @@
             </div>
         </div> -->
         
-        <div class="row p-2">
-
-        </div>
+        <!-- Abstract Section -->
         <div class="row">
-            <h3>Abstract: </h4>
+            <h3 id="abstract">Abstract:</h3>
         </div>
         <div class="row p-1">
 
@@ -125,8 +144,9 @@
 
         <div class="row p-2"></div>
         
+        <!-- CLARIS Teaser Diagram Section -->
         <div class="row">
-            <h3> CLARIS Teaser Diagram</h4>
+            <h3 id="teaser">CLARIS Teaser Diagram</h3>
         </div>
         <div class="row p-2"></div>
         <div class="row">
@@ -144,8 +164,9 @@
 
         <div class="row p-3"></div>
         
+        <!-- Proposed Method Section -->
         <div class="row">
-            <h3> Proposed Method</h4>
+            <h3 id="method">Proposed Method</h3>
         </div>
         <div class="row p-2"></div>
         <div class="row">
@@ -163,26 +184,28 @@
         </div>
     </div>
 
+    <!-- Experiment Sections -->
     <div class="d-block p-3 experimentSection">
-        <h3 class="sectionTitle">R1: CLARIS outperforms all baselines on the wTIMIT corpus</h3>
+        <h3 class="sectionTitle" id="R1">R1: CLARIS trained on 44 wTIMIT speakers and evaluated on 5% split</h3>
         <div class="row d-flex table-responsive overflow-auto audioContainer" id="wTIMIT44Container"></div>
+        <h3 class="sectionTitle" id="R2">R2: CLARIS evaluated on 4 unseen wTIMIT speakers</h3>
         <div class="row d-flex table-responsive overflow-auto audioContainer" id="wTIMIT4UnseenContainer"></div>
     </div>
     <div class="d-block p-3 experimentSection">
-        <h3 class="sectionTitle">R2: Zero-Shot and One-Shot methods fail on unseen accents. CLARIS presents a way to recover performance through personlization using only 15-30mins of data</h3>
+        <h3 class="sectionTitle" id="R3">R3: CLARIS evaluated on unseen Indian Accented English Speaker. CLARIS (Finetuned) on 30 minutes of whisper data</h3>
         <div class="row d-flex table-responsive overflow-auto audioContainer" id="IndianAccentEnglishContainer"></div>
     </div>
     <div class="d-block p-3 experimentSection">
-        <h3 class="sectionTitle">R3: Our Approach works for new languages as well</h3>
+        <h3 class="sectionTitle" id="R4">R4: CLARIS trained on 6 Hindi Speakers and evaluated on 5% split</h3>
         <div class="row d-flex table-responsive overflow-auto audioContainer" id="HindiContainer"></div>
     </div>
     <div class="d-block p-3 experimentSection">
-        <h3 class="sectionTitle">R4: CLARIS enables effective communication for people suffering from dysarthria</h3>
+        <h3 class="sectionTitle" id="R5">R5: CLARIS trained on 8 clinically challenging dysarthric speakers and evaluated on 5% split</h3>
         <h4 class="gtText">The following samples are for speakers from TORGO corpus</h4>
         <div class="row d-flex table-responsive overflow-auto audioContainer" id="TORGOContainer"></div>
     </div>
     <div class="d-block p-3 experimentSection">
-        <h3 class="sectionTitle">R5: CLARIS is not perfect. Errors do occur</h3>
+        <h3 class="sectionTitle" id="R6">R6: Failure cases of CLARIS on dysarthric speakers</h3>
         <div class="row d-flex table-responsive overflow-auto audioContainer" id="TORGOFailureContainer"></div>
     </div>
     <script src="scripts.js"></script>
